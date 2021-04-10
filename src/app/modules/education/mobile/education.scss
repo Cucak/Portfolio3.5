@@ -8,6 +8,22 @@
   color: white;
 }
 
+.title {
+  margin-top: 25%;
+  text-align: center;
+  
+}
+.unorderList {
+ list-style-type: none;
+    display: flex;
+    margin: auto;
+    margin-bottom: 5%;
+    padding: 0px;
+    margin-top: 5%;
+}
+ .unorderList li {
+    margin: 5px;
+  }
 .image_container {
   position: absolute;
   top: 0;
@@ -15,11 +31,12 @@
   right: 0;
   bottom: 0;
 
+  .main-content {
+    display: table;
+  }
+
   .image {
-    height: calc((100vh - 400px) / 2);
     width: 100%;
-    object-fit: cover;
-    transition: height 0.5s ease;
   }
 
   .selected_image {
@@ -34,7 +51,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba($color-dark, 0.8);
+    background: transparent;
   }
 }
 
