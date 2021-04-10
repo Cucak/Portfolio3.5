@@ -7,6 +7,7 @@ import { withRouter } from "react-router";
 import find from "lodash/find";
 import styles from "./education.scss";
 import { detectSwipe } from 'Common/utils/swipeGesture';
+import techDoodleImage from "../../../../assets/images/favicon.png.png";
 
 class EducationMobile extends Component {
   constructor(props) {
@@ -55,14 +56,14 @@ class EducationMobile extends Component {
   }
 
   getProjects = selectedId => {
-    const timeline = find(timelineListValue, timelineItem => {
-      return timelineItem.id === selectedId;
-    });
+    // const timeline = find(timelineListValue, timelineItem => {
+    //   return timelineItem.id === selectedId;
+    // });
 
-    return timeline.projects.map(project => ({
-      ...projectsListValue[project],
-      slug: project
-    }));
+    // return timeline.projects.map(project => ({
+    //   ...projectsListValue[project],
+    //   slug: project
+    // }));
   };
 
   onTimelineSelected = ({ selectedId }) => {
@@ -94,7 +95,7 @@ class EducationMobile extends Component {
       <Div passRef={this.containerRef} fillParent className={styles.timeline_container}>
         {/* Background div image */}
         <Div className={styles.image_container}>
-          {timelineListValue.map((timelineValue, index) => {
+          {/* {timelineListValue.map((timelineValue, index) => {
             if (timelineValue.id === selectedTimelineId) {
               return (
                 <img
@@ -112,7 +113,24 @@ class EducationMobile extends Component {
                 src={timelineValue.backgroundImage}
               />
             );
-          })}
+          })} */}
+                <div style={{color: "orange", fontWeight: "bold"}} className={styles.title}>Certificates:</div>
+                <center> <p style={{ marginTop: '20%'}}>CompTIA...</p> </center>
+                 <ul className={styles.unorderList}>
+                           
+                <li><a href="https://www.comptia.org/certifications/network"target="_blank">Network+</a></li>
+                 <li><a href="https://www.comptia.org/certifications/pentest"target="_blank">Pentest+</a></li>
+                 <li><a href="https://www.comptia.org/certifications/security"target="_blank">Security+</a></li>
+                 </ul>
+                 <div className="main-content">
+                 
+                     <center> <p>AWS ...</p></center>
+               <center> <a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/"target="_blank">Solutions Architect </a></center>
+                 </div>
+                 <img
+                className={styles.image}
+                src={techDoodleImage}
+              />
         </Div>
       </Div>
     );

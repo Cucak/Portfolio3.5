@@ -6,6 +6,26 @@
   position: relative;
   overflow: hidden;
 
+  .background_static_image{
+    width: 50%;
+  }
+
+  .unorderList {
+    list-style-type: none;
+    display: flex;
+    margin: auto;
+    padding: 0px;
+    margin-top: 5%;
+  }
+  .unorderList li {
+    margin: 5px;
+  }
+
+  .title {
+    margin-top: 5%;
+    text-align: center;
+  }
+
   .background_image {
     position: absolute;
     top: 0;
@@ -28,6 +48,11 @@
     right: 0;
     background: rgba($color-dark, 0.7);
     z-index: 1;
+  }
+
+  .left_container {
+    width: 50%;
+    padding: 20px;
   }
 
   .left_background_gradient {

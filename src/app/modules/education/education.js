@@ -6,7 +6,7 @@ import find from "lodash/find";
 import { Transition, Spring } from "react-spring/renderprops";
 import { random, parseNewLine } from "Common/utils";
 import { getImagePosition, getBackgroundTransition } from './education_helper';
-import techDoodleImage from "Images/favicon2.png";
+import techDoodleImage from "../../../assets/images/favicon.png.png";
 import techDoodleImage1 from "Images/island-logo-rest.png";
 import {Zoom} from "react-awesome-reveal";
 
@@ -84,24 +84,29 @@ class Education extends Component {
             {tech => props => (
               <Div style={props} className={styles.content_container}>
                 <div style={{color: "orange", fontWeight: "bold"}} className={styles.title}>Certificates:</div>
+                <center><p style={{color: "orange", marginTop: '20%'}}>CompTIA...</p> </center>
+                <ul className={styles.unorderList}>
+                <li><a href="https://www.comptia.org/certifications/network"target="_blank">Network+</a></li>
+                 <li><a href="https://www.comptia.org/certifications/pentest"target="_blank">Pentest+</a></li>
+                 <li><a href="https://www.comptia.org/certifications/security"target="_blank">Security+</a></li>
+                 </ul>
                 <Div align="Right" className={styles.description_container}>
                   <div style={{color: "orange"}} className={styles.description}>    
                   <Zoom>
-                <center> <p>CompTIA...</p> </center>
-                 <p><a href="https://www.comptia.org/certifications/network"target="_blank">Network+</a></p>
+                
+                 {/* <a href="https://www.comptia.org/certifications/network"target="_blank">Network+</a>
                  <a href="https://www.comptia.org/certifications/pentest"target="_blank">Pentest+</a>
-                 <a href="https://www.comptia.org/certifications/security"target="_blank">Security+</a>
+                 <a href="https://www.comptia.org/certifications/security"target="_blank">Security+</a> */}
                  </Zoom>
                  <Zoom delay={1000}>
                  <center> <p>AWS ...</p></center>
-               <a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/"target="_blank">Solutions Architect </a>
+               <center><a href="https://aws.amazon.com/certification/certified-solutions-architect-associate/"target="_blank">Solutions Architect </a></center>
                
                 </Zoom>
                 <Zoom delay={2000}>
-                <p></p>
                 </Zoom>
                 </div>  
-             <img src={techDoodleImage1} className={styles.background_static_image}/>          
+             {/* <img src={techDoodleImage1} className={styles.background_static_image}/>           */}
                 </Div>
               </Div>
             )}
